@@ -2192,7 +2192,7 @@
       <boolean/>
     </property>
     <!-- Map Name: also used for map utils when asked -->
-    <property name="mapName" value="1941balancedmod" editable="false"/>
+    <property name="mapName" value="1941_balanced_mod" editable="false"/>
     <!-- notes appear in the notes menu in the main screen, format as html -->
     <property name="notes">
       <value><![CDATA[  
