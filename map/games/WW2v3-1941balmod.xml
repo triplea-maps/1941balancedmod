@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="World War II v3 1941 Balanced Mod" version="1.0"/>
+  <info name="World War II v3 1941 Balanced Mod" version="1.1"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.7"/>
   <map>
@@ -1506,8 +1506,18 @@
       <option name="objectiveValue" value="5"/>
       <option name="alliedOwnershipTerritories" value="Karelia S.S.R.:Ukraine:Caucasus" count="2"/>
     </attachment>
-    <attachment name="objectiveAttachment3" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-      <option name="objectiveValue" value="5"/>
+	<attachment name="objectiveAttachment3" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+      <option name="objectiveValue" value="3"/>
+      <option name="alliedPresenceTerritories" value="Bulgaria Romania" count="1"/>
+	  <option name="enemyExclusionTerritories" value="Balkans:Ukraine:15 Sea Zone:16 Sea Zone"/>
+	  <option name="unitPresence" value="fighter:bomber" count="1"/>
+    </attachment>
+	    <attachment name="objectiveAttachment4" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+      <option name="objectiveValue" value="3"/>
+      <option name="alliedOwnershipTerritories" value="East Poland:Eastern Ukraine:Belorussia" count="2"/>
+    </attachment>
+    <attachment name="objectiveAttachment5" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+      <option name="objectiveValue" value="3"/>
       <option name="alliedOwnershipTerritories" value="Archangel:Russia:Kazakh S.S.R." count="2"/>
     </attachment>
     <!-- Russian Objectives -->
@@ -1521,7 +1531,7 @@
       <option name="objectiveValue" value="3"/>
 	  <option name="turns" value="2-+"/>
       <option name="alliedOwnershipTerritories" value="Persia:Caucasus" count="2"/>
-	  <option name="enemyExclusionTerritories" value="64 Sea Zone"/>
+	  <option name="enemyExclusionTerritories" value="34 Sea Zone"/>
     </attachment>
 	<attachment name="objectiveAttachment3" attachTo="Russians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="objectiveValue" value="3"/>
@@ -1569,8 +1579,8 @@
     </attachment>
     <attachment name="objectiveAttachment3" attachTo="British" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="objectiveValue" value="3"/>
-      <option name="directPresenceTerritories" value="Italy:Balkans" count="1"/>
-	  <option name="unitPresence" value="infantry:artillery:armour" count="1"/>
+      <option name="directOwnershipTerritories" value="Italy:Balkans:Bulgaria Romania" count="1"/>
+	  <option name="players" value="British:Americans"/>
     </attachment>
 	    <attachment name="objectiveAttachment4" attachTo="British" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="objectiveValue" value="5"/>
@@ -2216,12 +2226,15 @@
 						of the Allied NOs as part of their initial expansion, or else they’re likely to get crushed around turn 7 or 8 by the Allied rebound. 
 						I’ve also slightly changed China’s starting setup (and some of the Chinese movement/income rules) to make China more relevant. 
 						It is recommended to play with the Turkish Straits / Black Sea as open for both ships and planes for all players.</p>
+						<p>Version 1.1 contains minor changes to the German and British objectives based on more recent playtesting, and corrects an error with the Russian Southern Lend-Lease objective.</p>
 						<br>
 <p><strong>GERMANY</strong></p>
 <ul>
 <li><strong>Scandinavian Iron</strong> – 5 IPCs if Axis control 2+ of: Norway, Finland, and NW Europe</li>
-<li><strong>Eurasian Wheat</strong> – 5 IPCs if Axis control 2+ of: Karelia, Ukraine, Caucasus</li>
-<li><strong>Archangel-Astrakhan Line</strong> – 5 IPCs if Axis control 2+ of: Archangel, Moscow, and Kazakh</li>
+<li><strong>Operation Barbarossa</strong> – 5 IPCs if Axis control 2+ of: Karelia, Ukraine, Caucasus</li>
+<li><strong>Ploesti Oil Refinery</strong> - 3 IPCs if Axis have at least 1 plane in Rumania and Allies have no planes in Rumania, Balkans, Ukraine, SZ 15, and SZ 16.</li>
+<li><strong>Eurasian Wheat</strong> - 3 IPCs if Axis control 2+ of: East Poland, East Ukraine, Belorussia</li>
+<li><strong>Archangel-Astrakhan Line</strong> – 3 IPCs if Axis control 2+ of: Archangel, Moscow, and Kazakh</li>
 </ul>
 <p><strong>RUSSIA</strong></p>
 <ul>
@@ -2242,7 +2255,7 @@
 <ul>
 <li><strong>North Atlantic</strong> – 3 IPCs if Allies control E. Canada, Greenland, and Iceland with no Axis ships in SZs 1 through 9.</li>
 <li><strong>Mediterranean Route</strong> – 3 IPCs if Allies control Gibraltar and Egypt with no Axis warships in SZ 13, 14, 15, or 16.</li>
-<li><strong>Soft Underbelly</strong> – 3 IPCs if UK has at least one land unit in Italy and/or the Balkans.</li>
+<li><strong>Soft Underbelly</strong> – 3 IPCs if US or UK control Italy, the Balkans, and/or Rumania.</li>
 <li><strong>Indian Empire</strong> – 5 IPCs if Allies control India, Madagascar, and South Africa with no Axis ships in SZs 28 through 35.</li>
 <li><strong>ANZAC</strong> – 5 IPCs if Allies control Australia, New Zealand, New Guinea, and the Solomon Islands.</li>
 </ul>
